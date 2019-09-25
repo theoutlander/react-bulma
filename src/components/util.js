@@ -1,5 +1,5 @@
 let viewports = ["mobile", "desktop", "widescreen", "fullhd", "tablet"];
-let ignoreList = ["children", "width", "offset", "gap"];
+let ignoreList = ["children", "width", "offset", "gap", "fixedSize"];
 let gapList = [
   "mobileGap",
   "desktopGap",
@@ -73,48 +73,10 @@ function mapClasses(props) {
   return filter.join(" ");
 }
 
-// function splitMap(props, term) {
-//   if (!props) {
-//     return "";
-//   }
+function mapComposite(props) {
+  let filter = props.filter();
 
-//   let keys = Object.keys(props);
-//   // console.log("keys123:", keys);
+  return filter.join(" ");
+}
 
-//   let filter = keys
-//     .filter(k => k !== term)
-//     .filter(k => k.indexOf(term) >= 0)
-//     .filter(k => k !== "children")
-//     .map(k =>
-//       k
-//         .toLocaleLowerCase()
-//         .split(term)
-//         .join(`is-${term}-`)
-//         .split("one")
-//         .join("one-")
-//         .split("two")
-//         .join("two-")
-//         .split("three")
-//         .join("three-")
-//         .split("four")
-//         .join("four-")
-//         .split("mobile")
-//         .join("-mobile")
-//         .split("tablet")
-//         .join("-tablet")
-//         .split("desktop")
-//         .join("-desktop")
-//         .split("widescreen")
-//         .join("-widescreen")
-//         .split("fullhd")
-//         .join("-fullhd")
-//     );
-
-//   if (props[term]) {
-//     filter.push(`is-${term}-${props[term]}`);
-//   }
-
-//   console.log(filter.join());
-// }
-
-export { mapClasses };
+export { mapClasses, mapComposite };
