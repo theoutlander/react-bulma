@@ -15,6 +15,15 @@ const Label = props => {
             ))}
           </select>
         </div>
+        {props.hasIconsLeft && (
+          <div
+            class={`icon is-left ${classes
+              .filter(k => ["is-small", "is-medium", "is-large"].includes(k))
+              .join(" ")}`}
+          >
+            <i class={`fas ${props.icon}`} />
+          </div>
+        )}
       </div>
     </Control>
   );
@@ -35,7 +44,9 @@ Label.propTypes = {
   loading: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.string),
   multiple: PropTypes.bool,
-  size: PropTypes.number
+  size: PropTypes.number,
+  hasIconsLeft: PropTypes.bool,
+  icon: PropTypes.string
 };
 
 export default Label;
