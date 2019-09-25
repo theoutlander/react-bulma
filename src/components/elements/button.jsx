@@ -1,15 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { mapClasses } from "../util";
 
 const Button = props => {
+  let classes = `button ${mapClasses(props)}`;
+
   if (props.anchor) {
-    return <a className="button">Anchor</a>;
+    return <a className={classes}>{props.value}</a>;
   } else if (props.submit) {
-    return <input className="button" type="submit" value="Submit input" />;
+    return <input className={classes} type="submit" value="Submit input" />;
   } else if (props.reset) {
-    return <input className="button" type="reset" value="Reset input" />;
+    return <input className={classes} type="reset" value="Reset input" />;
   } else {
-    return <button className="button">Button</button>;
+    return <button className={classes}>{props.value}</button>;
   }
 };
 

@@ -16,8 +16,26 @@ import HeroFoot from "./components/layout/hero/hero.footer";
 import Section from "./components/layout/section";
 import Footer from "./components/layout/footer";
 import Tile from "./components/layout/tile";
+import Box from "./components/elements/box";
+import Button from "./components/elements/button";
+import Icon from "./components/elements/icon";
+import Control from "./components/form/control";
+import Help from "./components/form/help";
+import Input from "./components/form/input";
+import Label from "./components/form/label";
+import TextArea from "./components/form/textarea";
+import Select from "./components/form/select";
 
 export {
+  Control,
+  Help,
+  Select,
+  Input,
+  Label,
+  TextArea,
+  Box,
+  Button,
+  Icon,
   Columns,
   Column,
   Container,
