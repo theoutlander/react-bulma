@@ -1,8 +1,13 @@
 {
-  "name": "new",
+  "name": "react-bulma-component-library",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "React Component Library for the Bulma CSS Framework based on Flexbox",
+  "keywords": [
+    "react",
+    "bulma",
+    "css",
+    "framework"
+  ],
   "main": "src/index.js",
   "dependencies": {
     "@babel/core": "7.6.2",
