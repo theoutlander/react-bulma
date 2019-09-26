@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+// import PropTypes from 'prop-types';
 
-const Radio = props => {
-  return <div class="control">{props.children}</div>;
+const Radio = (props) => {
+	return <div className="control">{props.children}</div>;
 };
 
 Radio.propTypes = {};

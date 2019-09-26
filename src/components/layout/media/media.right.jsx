@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { mapClasses } from "../../util";
+import React from 'react';
+// import PropTypes from "prop-types";
+import { mapClasses } from '../../util';
 
-const MediaRight = props => {
-  let classes = mapClasses(props);
-  return <figure className={`media-right ${classes}`}>{props.children}</figure>;
+const MediaRight = (props) => {
+	let classes = mapClasses(props);
+	return <figure className={`media-right ${classes}`}>{props.children}</figure>;
 };
 
 // Level.propTypes = {

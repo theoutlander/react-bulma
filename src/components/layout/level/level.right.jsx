@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+// import PropTypes from "prop-types";
 
-const LevelRight = props => {
-  return <div className="level-right">{props.children}</div>;
+const LevelRight = (props) => {
+	return <div className="level-right">{props.children}</div>;
 };
 
 // Level.propTypes = {

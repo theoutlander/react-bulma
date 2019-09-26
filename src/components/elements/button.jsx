@@ -1,38 +1,65 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { mapClasses } from "../util";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { mapClasses } from '../util';
+import { ColorProps, SizeProps } from '../props';
 
-const Button = props => {
-  let classes = `button ${mapClasses(props)}`;
+// TODO: are-small
+//
 
-  if (props.anchor) {
-    return <a className={classes}>{props.value}</a>;
-  } else if (props.submit) {
-    return <input className={classes} type="submit" value="Submit input" />;
-  } else if (props.reset) {
-    return <input className={classes} type="reset" value="Reset input" />;
-  } else {
-    return <button className={classes}>{props.value}</button>;
-  }
+const Button = (props) => {
+	let classes = `button ${mapClasses(props)}`;
+
+	let markup = [];
+	if (props.anchor) {
+		markup.push(<a className={classes}>{props.children}</a>);
+	} else if (props.submit) {
+		markup.push(<input className={classes} type="submit" value={props.children} />);
+	} else if (props.reset) {
+		markup.push(<input className={classes} type="reset" value={props.children} />);
+	} else {
+		markup.push(
+			<button key="btn" className={classes}>
+				{props.children}
+			</button>
+		);
+	}
+
+	if (props.icon) {
+		markup.push(
+			<span key="icon" className={`icon ${classes}`}>
+				<i className={`fas ${props.icon}`} />
+			</span>
+		);
+	}
+
+	return markup;
 };
 
 Button.propTypes = {
-  anchor: PropTypes.bool,
-  submit: PropTypes.bool,
-  reset: PropTypes.bool,
-  button: PropTypes.bool,
-  white: PropTypes.bool,
-  light: PropTypes.bool,
-  dark: PropTypes.bool,
-  black: PropTypes.bool,
-  text: PropTypes.bool,
-  primary: PropTypes.bool,
-  info: PropTypes.bool,
-  danger: PropTypes.bool,
-  warning: PropTypes.bool,
-  success: PropTypes.bool,
-  link: PropTypes.bool
-  // type: PropTypes.oneOf(["anchor", "button", "submit", "reset"])
+	...ColorProps,
+	...SizeProps,
+	anchor: PropTypes.bool,
+	submit: PropTypes.bool,
+	reset: PropTypes.bool,
+	button: PropTypes.bool,
+	white: PropTypes.bool,
+	light: PropTypes.bool,
+	dark: PropTypes.bool,
+	black: PropTypes.bool,
+	text: PropTypes.bool,
+
+	fullwidth: PropTypes.bool,
+	outlined: PropTypes.bool,
+	hovered: PropTypes.bool,
+	active: PropTypes.bool,
+	static: PropTypes.bool,
+	loading: PropTypes.bool,
+	rounded: PropTypes.bool,
+	inverted: PropTypes.bool,
+
+	icon: PropTypes.string,
+	selected: PropTypes.bool
+	// type: PropTypes.oneOf(["anchor", "button", "submit", "reset"])
 };
 
 export default Button;

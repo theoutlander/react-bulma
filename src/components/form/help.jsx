@@ -1,19 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { mapClasses } from "../util";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { mapClasses } from '../util';
+import { ColorProps } from '../props';
+import BulmaHOC from '../bulma.hoc';
 
-const Help = props => {
-  let classes = mapClasses(props);
-  return <p class={`help ${classes}`}>{props.value}</p>;
+const Help = (props) => {
+	let classes = mapClasses(props);
+	return <p className={`help ${classes} ${props.colorClass}`}>{props.value}</p>;
 };
 
 Help.propTypes = {
-  value: PropTypes.string,
-  primary: PropTypes.bool,
-  success: PropTypes.bool,
-  warning: PropTypes.bool,
-  danger: PropTypes.bool,
-  info: PropTypes.bool
+	value: PropTypes.string,
+	...ColorProps
 };
 
-export default Help;
+export default BulmaHOC(Help);
