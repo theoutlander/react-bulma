@@ -12,9 +12,9 @@ const Control = props => {
 
   return (
     <div
-      class={`control ${classes}`}
+      className={`control ${classes}`}
       disabled={props.disabled}
-      readonly={props.readonly}
+      readOnly={props.readonly}
     >
       {props.children}
     </div>

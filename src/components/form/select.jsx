@@ -5,9 +5,10 @@ import { mapClasses } from "../util";
 
 const Label = props => {
   let classes = mapClasses(props);
+  console.log(classes);
   return (
     <Control {...props}>
-      <div class="field">
+      <div className="field">
         <div className={`select ${classes}`}>
           <select multiple={props.multiple} size={props.size}>
             {props.options.map(o => (
@@ -15,13 +16,14 @@ const Label = props => {
             ))}
           </select>
         </div>
-        {props.hasIconsLeft && (
+        {props.hasIconsLeft && props.icon && (
           <div
-            class={`icon is-left ${classes
+            className={`icon is-left ${classes
+              .split()
               .filter(k => ["is-small", "is-medium", "is-large"].includes(k))
               .join(" ")}`}
           >
-            <i class={`fas ${props.icon}`} />
+            <i className={`fas ${props.icon}`} />
           </div>
         )}
       </div>

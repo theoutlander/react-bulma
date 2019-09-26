@@ -25,8 +25,14 @@ import Input from "./components/form/input";
 import Label from "./components/form/label";
 import TextArea from "./components/form/textarea";
 import Select from "./components/form/select";
+import Checkbox from "./components/form/checkbox";
+import Radio from "./components/form/radio";
+import RadioOption from "./components/form/radio.option";
 
 export {
+  Checkbox,
+  Radio,
+  RadioOption,
   Control,
   Help,
   Select,

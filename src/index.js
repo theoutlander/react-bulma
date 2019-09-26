@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 import {
   Columns,
@@ -26,22 +27,44 @@ import {
   Button,
   Section,
   Icon,
-  Select
+  Select,
+  Checkbox,
+  Radio,
+  RadioOption
 } from "./react.bulma";
 
 function App() {
   return (
     <React.Fragment>
-      <Hero fullheight primary>
-        <HeroHead>
-          <Level mobile2>
-            <LevelLeft>
-              <LevelItem>
-                <Select options={["asd", "ASD"]} multiple size={1} />
-              </LevelItem>
-            </LevelLeft>
-            {/* <LevelItem>What</LevelItem> */}
-          </Level>
+      <Hero fullheight>
+        <HeroHead primary>
+          <Container fluid primary>
+            <Level mobile>
+              <LevelLeft>
+                <LevelItem>
+                  <Select
+                    options={["asd", "ASD"]}
+                    multiple2
+                    hasIconsLeft
+                    icon="fa-bath"
+                    size={0}
+                    large
+                  />
+                </LevelItem>
+              </LevelLeft>{" "}
+              <LevelRight>
+                <LevelItem>
+                  <Checkbox disabled={false}>TEST</Checkbox>
+                </LevelItem>
+                <LevelItem>
+                  <Radio name="THISTEST">
+                    <RadioOption>TEST123</RadioOption>
+                    <RadioOption disabled>TEST123</RadioOption>
+                  </Radio>
+                </LevelItem>
+              </LevelRight>
+            </Level>
+          </Container>
         </HeroHead>
         <HeroBody>Testing</HeroBody>
       </Hero>

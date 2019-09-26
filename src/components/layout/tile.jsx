@@ -1,4 +1,4 @@
-// https://bulma.io/documentation/layout/container/
+// https://bulma.io/documentation/layout/tiles;ty/
 import React from "react";
 import PropTypes from "prop-types";
 import { mapClasses } from "../util";

@@ -7,10 +7,8 @@ const Level = props => {
   return <nav className={`level ${classes}`}>{props.children}</nav>;
 };
 
-// Level.propTypes = {
-//   fluid: PropTypes.bool,
-//   fullhd: PropTypes.bool,
-//   widescreen: PropTypes.bool
-// };
+Level.propTypes = {
+  mobile: PropTypes.bool
+};
 
 export default Level;
