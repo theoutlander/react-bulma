@@ -45,7 +45,9 @@ import {
 	CardImage,
 	CardHeader,
 	CardFooter,
-	CardFooterItem
+	CardFooterItem,
+	Dropdown,
+	DropdownItem
 } from './react.bulma';
 
 function App() {
@@ -93,6 +95,15 @@ function App() {
 					<Container>
 						<Title size={1}>What is this</Title>
 						<SubTitle size={3}>What is this</SubTitle>
+					</Container>
+					<Container>
+						<Dropdown title="WHAT" up>
+							<DropdownItem>
+								<p>
+									You can insert <strong>any type of content</strong> within the dropdown menu.
+								</p>
+							</DropdownItem>
+						</Dropdown>
 					</Container>
 					<Container>
 						<div class="card">

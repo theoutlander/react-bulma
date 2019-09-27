@@ -43,8 +43,12 @@ import CardFooterItem from './components/components/card/card.footer.item';
 import CardHeader from './components/components/card/card.header';
 import CardImage from './components/components/card/card.image';
 import CardContent from './components/components/card/card.content';
+import Dropdown from './components/components/dropdown/dropdown';
+import DropdownItem from './components/components/dropdown/dropdown.item';
 
 export {
+	Dropdown,
+	DropdownItem,
 	Card,
 	CardFooterItem,
 	CardImage,
