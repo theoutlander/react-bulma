@@ -34,7 +34,12 @@ import {
 	Content,
 	Tags,
 	Tag,
-	TagsGroup
+	TagsGroup,
+	Delete,
+	Title,
+	SubTitle,
+	BreadCrumbs,
+	BreadCrumb
 } from './react.bulma';
 
 function App() {
@@ -71,26 +76,66 @@ function App() {
 							</LevelRight>
 						</Level>
 					</Container>
+					<Container>
+						<BreadCrumbs large centered dotSeparator>
+							<BreadCrumb icon="fa-globe">TEST</BreadCrumb>
+							<BreadCrumb active>Crumb2</BreadCrumb>
+						</BreadCrumbs>
+					</Container>
 				</HeroHead>
 				<HeroBody>
 					<Container>
-						<Tag delete black>
-							React
-						</Tag>
+						<Title size={1}>What is this</Title>
+						<SubTitle size={3}>What is this</SubTitle>
 					</Container>
 					{/* <Content large>This is content</Content> */}
-					<Tag delete black>
-						React
-					</Tag>
 					<Section>
 						<Tag delete black>
 							React
 						</Tag>
 					</Section>
 					<Section>
-						<Tag primary delete>
-							React
-						</Tag>
+						<Tags multiline>
+							<Tag>React</Tag>
+							<Tag>React</Tag>
+							<Tag>React</Tag>
+							<Tag>React</Tag>
+							<Tag>React</Tag>
+							<Tag>React</Tag>
+							<Tag>React</Tag>
+							<Tag primary>Is Primary</Tag>
+						</Tags>
+						<Tags addons>
+							<Tag danger>React</Tag>
+							{/* <Delete /> */}
+							<a class="tag is-delete" />
+						</Tags>
+						<TagsGroup multiline>
+							<Tags addons>
+								<Tag>React</Tag>
+								<Tag primary>Is Primary</Tag>
+							</Tags>
+							<Tags addons>
+								<Tag>React</Tag>
+								<Tag primary>Is Primary</Tag>
+							</Tags>{' '}
+							<Tags addons>
+								<Tag>React</Tag>
+								<Tag primary>Is Primary</Tag>
+							</Tags>{' '}
+							<Tags addons>
+								<Tag>React</Tag>
+								<Tag primary>Is Primary</Tag>
+							</Tags>{' '}
+							<Tags addons>
+								<Tag>React</Tag>
+								<Tag primary>Is Primary</Tag>
+							</Tags>
+							<Tags addons>
+								<Tag>React</Tag>
+								<Tag primary>Is Primary</Tag>
+							</Tags>
+						</TagsGroup>
 					</Section>
 				</HeroBody>
 			</Hero>

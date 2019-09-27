@@ -13,7 +13,8 @@ const SizeProps = {
 	small: PropTypes.bool,
 	medium: PropTypes.bool,
 	normal: PropTypes.bool,
-	large: PropTypes.bool
+	large: PropTypes.bool,
+	size: PropTypes.number
 };
 
 const ModifierProps = {
@@ -21,4 +22,16 @@ const ModifierProps = {
 	delete: PropTypes.bool
 };
 
-export { ColorProps, SizeProps, ModifierProps };
+const AlignmentProps = {
+	centered: PropTypes.bool,
+	right: PropTypes.bool
+};
+
+const SeparatorProps = {
+	dotSeparator: PropTypes.bool,
+	arrowSeparator: PropTypes.bool,
+	bulletSeparator: PropTypes.bool,
+	succeedsdotSeparator: PropTypes.bool
+};
+
+export { ColorProps, SizeProps, ModifierProps, AlignmentProps, SeparatorProps };

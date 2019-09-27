@@ -32,8 +32,18 @@ import Content from './components/elements/content';
 import Tags from './components/elements/tags';
 import Tag from './components/elements/tag';
 import TagsGroup from './components/elements/tags.group';
+import Delete from './components/elements/delete';
+import Title from './components/elements/title';
+import SubTitle from './components/elements/subtitle';
+import BreadCrumbs from './components/components/breadcrumbs';
+import BreadCrumb from './components/components/breadcrumb';
 
 export {
+	Delete,
+	BreadCrumbs,
+	BreadCrumb,
+	SubTitle,
+	Title,
 	Tag,
 	Tags,
 	TagsGroup,
