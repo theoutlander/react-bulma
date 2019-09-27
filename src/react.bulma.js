@@ -45,8 +45,16 @@ import CardImage from './components/components/card/card.image';
 import CardContent from './components/components/card/card.content';
 import Dropdown from './components/components/dropdown/dropdown';
 import DropdownItem from './components/components/dropdown/dropdown.item';
+import Menu from './components/components/menu/menu';
+import MenuItem from './components/components/menu/menu.item';
+import MenuLabel from './components/components/menu/menu.label';
+import MenuList from './components/components/menu/menu.list';
 
 export {
+	Menu,
+	MenuItem,
+	MenuList,
+	MenuLabel,
 	Dropdown,
 	DropdownItem,
 	Card,
