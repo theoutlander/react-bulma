@@ -7,9 +7,9 @@ import BulmaHOC from '../bulma.hoc';
 const Tag = (props) => {
 	return (
 		<React.Fragment>
-			{/* <span class="tag is-success"> 
+			{/* <span className="tag is-success"> 
 				Bar
-				<button class="delete is-small" />
+				<button className="delete is-small" />
 			</span> */}
 			<span className={`tag ${props.colorClass} ${props.modifierClass}`}>
 				{props.children}
