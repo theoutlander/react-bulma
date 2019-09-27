@@ -39,7 +39,13 @@ import {
 	Title,
 	SubTitle,
 	BreadCrumbs,
-	BreadCrumb
+	BreadCrumb,
+	CardContent,
+	Card,
+	CardImage,
+	CardHeader,
+	CardFooter,
+	CardFooterItem
 } from './react.bulma';
 
 function App() {
@@ -87,6 +93,30 @@ function App() {
 					<Container>
 						<Title size={1}>What is this</Title>
 						<SubTitle size={3}>What is this</SubTitle>
+					</Container>
+					<Container>
+						<div class="card">
+							<div class="card-content">
+								<p class="title">
+									“There are two hard things in computer science: cache invalidation, naming things,
+									and off-by-one errors.”
+								</p>
+								<p class="subtitle">Jeff Atwood</p>
+							</div>
+							<footer class="card-footer">
+								<p class="card-footer-item">
+									<span>
+										View on{' '}
+										<a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+									</span>
+								</p>
+								<p class="card-footer-item">
+									<span>
+										Share on <a href="#">Facebook</a>
+									</span>
+								</p>
+							</footer>
+						</div>
 					</Container>
 					{/* <Content large>This is content</Content> */}
 					<Section>

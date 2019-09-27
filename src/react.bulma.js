@@ -37,8 +37,20 @@ import Title from './components/elements/title';
 import SubTitle from './components/elements/subtitle';
 import BreadCrumbs from './components/components/breadcrumbs';
 import BreadCrumb from './components/components/breadcrumb';
+import Card from './components/components/card/card';
+import CardFooter from './components/components/card/card.footer';
+import CardFooterItem from './components/components/card/card.footer.item';
+import CardHeader from './components/components/card/card.header';
+import CardImage from './components/components/card/card.image';
+import CardContent from './components/components/card/card.content';
 
 export {
+	Card,
+	CardFooterItem,
+	CardImage,
+	CardHeader,
+	CardContent,
+	CardFooter,
 	Delete,
 	BreadCrumbs,
 	BreadCrumb,
