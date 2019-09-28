@@ -49,9 +49,9 @@ import Menu from './components/components/menu/menu';
 import MenuItem from './components/components/menu/menu.item';
 import MenuLabel from './components/components/menu/menu.label';
 import MenuList from './components/components/menu/menu.list';
-import Message from './components/components/messsage/message';
-import MessageHeader from './components/components/messsage/message.header';
-import MessageBody from './components/components/messsage/message.body';
+import Message from './components/components/message/message';
+import MessageHeader from './components/components/message/message.header';
+import MessageBody from './components/components/message/message.body';
 
 export {
 	Message,

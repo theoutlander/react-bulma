@@ -11,7 +11,7 @@ const MessageHeader = (props) => {
 };
 
 MessageHeader.propTypes = {
-	title: PropTypes.string.required
+	title: PropTypes.string
 };
 
 export default MessageHeader;

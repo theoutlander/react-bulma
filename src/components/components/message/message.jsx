@@ -1,14 +1,14 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import { colorProps, sizeProps } from '../../props';
+import { ColorProps, SizeProps } from '../../props';
 
 const Message = (props) => {
 	return <article className={`message ${props.colorClass} ${props.sizeClass}`}>{props.children}</article>;
 };
 
 Message.propTypes = {
-	...colorProps,
-	...sizeProps
+	...ColorProps,
+	...SizeProps
 };
 
 export default Message;
