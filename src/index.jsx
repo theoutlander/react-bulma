@@ -47,7 +47,12 @@ import {
 	CardFooter,
 	CardFooterItem,
 	Dropdown,
-	DropdownItem
+	DropdownItem,
+	Modal,
+	ModalCard,
+	ModalCardBody,
+	ModalCardHeader,
+	ModalCardFooter
 } from './react.bulma';
 
 function App() {
@@ -92,6 +97,26 @@ function App() {
 					</Container>
 				</HeroHead>
 				<HeroBody>
+					<Container hide>
+						<Modal>
+							<Tags multiline>
+								<Tag>React</Tag>
+								<Tag>React</Tag>
+								<Tag>React</Tag>
+								<Tag>React</Tag>
+								<Tag>React</Tag>
+								<Tag>React</Tag>
+								<Tag>React</Tag>
+								<Tag primary>Is Primary</Tag>
+							</Tags>
+						</Modal>
+
+						<ModalCard>
+							<ModalCardHeader>This is the header</ModalCardHeader>
+							<ModalCardBody>This is the body</ModalCardBody>
+							<ModalCardFooter>This is the footer</ModalCardFooter>
+						</ModalCard>
+					</Container>
 					<Container>
 						<Title size={1}>What is this</Title>
 						<SubTitle size={3}>What is this</SubTitle>
@@ -105,7 +130,7 @@ function App() {
 							</DropdownItem>
 						</Dropdown>
 					</Container>
-					<Container>
+					<Container hide>
 						<div className="card">
 							<div className="card-content">
 								<p className="title">

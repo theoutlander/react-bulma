@@ -52,8 +52,18 @@ import MenuList from './components/components/menu/menu.list';
 import Message from './components/components/message/message';
 import MessageHeader from './components/components/message/message.header';
 import MessageBody from './components/components/message/message.body';
+import Modal from './components/components/modal/modal';
+import ModalCard from './components/components/modal/modal.card';
+import ModalCardBody from './components/components/modal/modal.card.body';
+import ModalCardHeader from './components/components/modal/modal.card.header';
+import ModalCardFooter from './components/components/modal/modal.card.footer';
 
 export {
+	Modal,
+	ModalCard,
+	ModalCardBody,
+	ModalCardHeader,
+	ModalCardFooter,
 	Message,
 	MessageHeader,
 	MessageBody,
