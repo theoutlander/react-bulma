@@ -8,7 +8,10 @@ const Select = (props) => {
 	return (
 		<Control {...props}>
 			<div className="field">
-				<div key="select" className={`select ${colorClass} ${sizeClass} ${stateClass} ${props.rounded}`}>
+				<div
+					key="select"
+					className={`select ${props.colorClass} ${props.sizeClass} ${props.stateClass} ${props.rounded}`}
+				>
 					<select multiple={props.multiple} size={props.size}>
 						{props.options.map((o, i) => (
 							<option key={i} value={o.value || o.text || o}>
@@ -19,7 +22,7 @@ const Select = (props) => {
 				</div>
 				{props.iconLeft &&
 				props.icon && (
-					<div key="icon" className={`icon ${props.iconLeft && 'is-left'} ${sizeClass}`}>
+					<div key="icon" className={`icon ${props.iconLeft && 'is-left'} ${props.sizeClass}`}>
 						<i className={`fas ${props.icon}`} />
 					</div>
 				)}

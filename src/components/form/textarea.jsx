@@ -13,7 +13,7 @@ const TextArea = (props) => {
 			<Control>
 				<textarea
 					rows={props.rows}
-					className={`textarea ${colorClass} ${sizeClass} ${stateClass} ${props.fixedSize &&
+					className={`textarea ${props.colorClass} ${props.sizeClass} ${props.stateClass} ${props.fixedSize &&
 						'has-fixed-size'}`}
 					type={props.text}
 					placeholder={props.placeholder}
