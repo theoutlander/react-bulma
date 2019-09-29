@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 // a container for almost anything you want, like a field
 const NavbarItem = (props) => {
 	if (props.divider) {
-		return <hr class="navbar-divider" />;
+		return <hr className="navbar-divider" />;
 	}
 	if (props.dropdown || props.container) {
 		return (

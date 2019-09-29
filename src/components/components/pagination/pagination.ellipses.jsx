@@ -2,7 +2,7 @@ import React from 'react';
 
 const PaginationLink = () => (
 	<li>
-		<span class="pagination-ellipsis">&hellip;</span>
+		<span className="pagination-ellipsis">&hellip;</span>
 	</li>
 );
 

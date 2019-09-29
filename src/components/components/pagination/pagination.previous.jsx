@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const PaginationPrevious = (props) => {
 	return (
-		<a class="pagination-previous" title={props.title} disabled={props.disabled}>
+		<a className="pagination-previous" title={props.title} disabled={props.disabled}>
 			{props.children}
 		</a>
 	);

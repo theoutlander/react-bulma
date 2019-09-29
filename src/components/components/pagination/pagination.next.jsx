@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const PaginationNext = (props) => {
 	return (
-		<a class="pagination-next" title={props.title} disabled={props.disabled}>
+		<a className="pagination-next" title={props.title} disabled={props.disabled}>
 			{props.children}
 		</a>
 	);

@@ -3,7 +3,7 @@ import React from 'react';
 
 const Pagination = (props) => {
 	return (
-		<nav class="pagination" role="navigation" aria-label="pagination">
+		<nav className="pagination" role="navigation" aria-label="pagination">
 			{props.children}
 		</nav>
 	);

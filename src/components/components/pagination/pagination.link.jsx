@@ -5,7 +5,7 @@ const PaginationLink = (props) => {
 	return (
 		<li>
 			<a
-				class={`pagination-link ${props.current && 'is-current'}`}
+				className={`pagination-link ${props.current && 'is-current'}`}
 				aria-label={props.ariaLabel}
 				aria-current={props.current && 'page'}
 			>
