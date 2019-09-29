@@ -6,7 +6,10 @@ const ColorProps = {
 	danger: PropTypes.bool,
 	warning: PropTypes.bool,
 	success: PropTypes.bool,
-	link: PropTypes.bool
+  link: PropTypes.bool,
+  light: PropTypes.bool,
+  dark: PropTypes.bool,
+  
 };
 
 const SizeProps = {
@@ -14,7 +17,8 @@ const SizeProps = {
 	medium: PropTypes.bool,
 	normal: PropTypes.bool,
 	large: PropTypes.bool,
-	size: PropTypes.number
+	size: PropTypes.number,
+	fullheight: PropTypes.bool
 };
 
 const ModifierProps = {
@@ -41,4 +45,10 @@ const StyleProps = {
 	fullWidth: PropTypes.bool
 };
 
-export { ColorProps, SizeProps, ModifierProps, AlignmentProps, SeparatorProps, StyleProps };
+const StateProps = {
+	hovered: PropTypes.bool,
+	focused: PropTypes.bool,
+	loading: PropTypes.bool
+};
+
+export { ColorProps, SizeProps, ModifierProps, AlignmentProps, SeparatorProps, StyleProps, StateProps };

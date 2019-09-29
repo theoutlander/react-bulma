@@ -2,24 +2,19 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Label from './label';
 import Control from './control';
-import { mapClasses } from '../util';
+import { ColorProps, SizeProps, StatesProps, StateProps } from '../props';
+import BulmaHOC from '../bulma.hoc';
 
 const TextArea = (props) => {
 	const [ value, setValue ] = useState(props.value);
-	let classes = mapClasses(props);
-	// let type =
-	//   (props.tel && "tel") ||
-	//   (props.email && "email") ||
-	//   (props.text && "text") ||
-	//   (props.password && "password");
-	classes += props.fixedSize && 'has-fixed-size';
 	return (
 		<div className="field">
 			{props.label && <Label value={props.label} />}
 			<Control>
 				<textarea
 					rows={props.rows}
-					className={`textarea ${classes}`}
+					className={`textarea ${colorClass} ${sizeClass} ${stateClass} ${props.fixedSize &&
+						'has-fixed-size'}`}
 					type={props.text}
 					placeholder={props.placeholder}
 					value={value}
@@ -31,25 +26,11 @@ const TextArea = (props) => {
 };
 
 TextArea.propTypes = {
-	primary: PropTypes.bool,
-	success: PropTypes.bool,
-	warning: PropTypes.bool,
-	danger: PropTypes.bool,
-	info: PropTypes.bool,
+	...ColorProps,
 	rows: PropTypes.number,
-	// text: PropTypes.bool,
-	// tel: PropTypes.bool,
-	// email: PropTypes.bool,
-	// password: PropTypes.bool,
-	small: PropTypes.bool,
-	medium: PropTypes.bool,
-	large: PropTypes.bool,
-
-	// rounded: PropTypes.bool,
-	hovered: PropTypes.bool,
-	focused: PropTypes.bool,
-	loading: PropTypes.bool,
+	...SizeProps,
+	...StateProps,
 	fixedSize: PropTypes.bool
 };
 
-export default TextArea;
+export default BulmaHOC(TextArea);

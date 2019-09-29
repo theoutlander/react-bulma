@@ -1,29 +1,27 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { mapClasses } from "../../util";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { ColorProps } from '../../props';
+import BulmaHOC from '../../bulma.hoc';
 
-const Hero = props => {
-  let classes = mapClasses(props);
-
-  //is-link is-fullheight-with-navbar
-
-  return <section className={`hero ${classes}`}>{props.children}</section>;
+const Hero = (props) => {
+	return (
+		<section
+			className={`hero ${props.sizeClass} ${props.bold && 'is-bold'} ${props.link &&
+				'is-link'} ${props.colorClass}`}
+		>
+			{props.children}
+		</section>
+	);
 };
 
 Hero.propTypes = {
-  primary: PropTypes.bool,
-  success: PropTypes.bool,
-  danger: PropTypes.bool,
-  info: PropTypes.bool,
-  warning: PropTypes.bool,
-  light: PropTypes.bool,
-  dark: PropTypes.bool,
-  bold: PropTypes.bool,
-  medium: PropTypes.bool,
-  large: PropTypes.bool,
-  fullheight: PropTypes.bool,
-  link: PropTypes.bool,
-  fullheightWithNavbar: PropTypes.bool
+	...ColorProps,
+	bold: PropTypes.bool,
+	medium: PropTypes.bool,
+	large: PropTypes.bool,
+	fullHeight: PropTypes.bool,
+	fullHeightWithNavbar: PropTypes.bool,
+	link: PropTypes.bool
 };
 
-export default Hero;
+export default BulmaHOC(Hero);

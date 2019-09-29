@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Control from './control';
-import { mapClasses } from '../util';
+import { ColorProps, SizeProps, StatesProps, StateProps } from '../props';
+import BulmaHOC from '../bulma.hoc';
 
 const Select = (props) => {
-	let classes = mapClasses(props);
-	console.log(classes);
 	return (
 		<Control {...props}>
 			<div className="field">
-				<div key="select" className={`select ${classes}`}>
+				<div key="select" className={`select ${colorClass} ${sizeClass} ${stateClass} ${props.rounded}`}>
 					<select multiple={props.multiple} size={props.size}>
 						{props.options.map((o, i) => (
 							<option key={i} value={o.value || o.text || o}>
@@ -18,15 +17,9 @@ const Select = (props) => {
 						))}
 					</select>
 				</div>
-				{props.hasIconsLeft &&
+				{props.iconLeft &&
 				props.icon && (
-					<div
-						key="icon"
-						className={`icon is-left ${classes
-							.split()
-							.filter((k) => [ 'is-small', 'is-medium', 'is-large' ].includes(k))
-							.join(' ')}`}
-					>
+					<div key="icon" className={`icon ${props.iconLeft && 'is-left'} ${sizeClass}`}>
 						<i className={`fas ${props.icon}`} />
 					</div>
 				)}
@@ -36,23 +29,14 @@ const Select = (props) => {
 };
 
 Select.propTypes = {
-	primary: PropTypes.bool,
-	success: PropTypes.bool,
-	warning: PropTypes.bool,
-	danger: PropTypes.bool,
-	info: PropTypes.bool,
+	...ColorProps,
+	...SizeProps,
 	rounded: PropTypes.bool,
-	small: PropTypes.bool,
-	medium: PropTypes.bool,
-	large: PropTypes.bool,
-	hovered: PropTypes.bool,
-	focused: PropTypes.bool,
-	loading: PropTypes.bool,
+	...StateProps,
 	options: PropTypes.arrayOf(PropTypes.string),
 	multiple: PropTypes.bool,
-	size: PropTypes.number,
-	hasIconsLeft: PropTypes.bool,
+	iconLeft: PropTypes.bool,
 	icon: PropTypes.string
 };
 
-export default Select;
+export default BulmaHOC(Select);

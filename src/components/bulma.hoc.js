@@ -10,6 +10,10 @@ function mapSize(props) {
 		return 'is-normal';
 	} else if (props.large) {
 		return 'is-large';
+	} else if (props.fullHeight) {
+		return 'fullheight';
+	} else if (props.fullHeightWithNavbar) {
+		return 'fullheight-with-navbar';
 	} else if (props.size >= 0) {
 		return `is-${props.size}`;
 	}
@@ -119,6 +123,46 @@ function mapStyle(props) {
 	return classes.join(' ');
 }
 
+function mapState(props) {
+	let classes = [];
+
+	if (props.hovered) {
+		classes.push('is-hovered');
+	}
+
+	if (props.focused) {
+		classes.push('is-focused');
+	}
+
+	if (props.loading) {
+		classes.push('is-loading');
+	}
+
+	return classes.join(' ');
+}
+
+function mapType(props) {
+	let classes = [];
+
+	if (props.text) {
+		classes.push('text');
+	}
+
+	if (props.tel) {
+		classes.push('tel');
+	}
+
+	if (props.email) {
+		classes.push('email');
+	}
+
+	if (props.password) {
+		classes.push('password');
+	}
+
+	return classes.join(' ');
+}
+
 export default (Component) => {
 	return (props) => {
 		return (
@@ -131,6 +175,8 @@ export default (Component) => {
 				alignmentClass={mapAlignment(props)}
 				separatorClass={mapSeparators(props)}
 				styleClass={mapStyle(props)}
+				stateClass={mapState(props)}
+				typeClass={mapType(props)}
 			/>
 		);
 	};
