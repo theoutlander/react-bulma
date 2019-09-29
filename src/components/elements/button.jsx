@@ -2,16 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { mapClasses } from '../util';
 import { ColorProps, SizeProps } from '../props';
+import BulmaHOC from '../bulma.hoc';
 
 // TODO: are-small
-//
-
 const Button = (props) => {
 	let classes = `button ${mapClasses(props)}`;
 
 	let markup = [];
 	if (props.anchor) {
-		markup.push(<a className={classes}>{props.children}</a>);
+		markup.push(<a className={`${classes} ${props.colorClass}`}>{props.children}</a>);
 	} else if (props.submit) {
 		markup.push(<input className={classes} type="submit" value={props.children} />);
 	} else if (props.reset) {
@@ -42,12 +41,7 @@ Button.propTypes = {
 	submit: PropTypes.bool,
 	reset: PropTypes.bool,
 	button: PropTypes.bool,
-	white: PropTypes.bool,
-	light: PropTypes.bool,
-	dark: PropTypes.bool,
-	black: PropTypes.bool,
 	text: PropTypes.bool,
-
 	fullwidth: PropTypes.bool,
 	outlined: PropTypes.bool,
 	hovered: PropTypes.bool,
@@ -56,10 +50,8 @@ Button.propTypes = {
 	loading: PropTypes.bool,
 	rounded: PropTypes.bool,
 	inverted: PropTypes.bool,
-
 	icon: PropTypes.string,
 	selected: PropTypes.bool
-	// type: PropTypes.oneOf(["anchor", "button", "submit", "reset"])
 };
 
-export default Button;
+export default BulmaHOC(Button);

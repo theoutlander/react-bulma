@@ -163,6 +163,18 @@ function mapType(props) {
 	return classes.join(' ');
 }
 
+function mapContext(props) {
+	if (props.ancestor) {
+		return 'is-ancestor';
+	} else if (props.parent) {
+		return 'is-parent';
+	} else if (props.child) {
+		return 'is-child';
+	}
+
+	return '';
+}
+
 export default (Component) => {
 	return (props) => {
 		return (
@@ -177,6 +189,7 @@ export default (Component) => {
 				styleClass={mapStyle(props)}
 				stateClass={mapState(props)}
 				typeClass={mapType(props)}
+				contextualClass={mapContext(props)}
 			/>
 		);
 	};

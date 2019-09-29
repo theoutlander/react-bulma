@@ -1,14 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { mapClasses } from "../../util";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Level = props => {
-  let classes = mapClasses(props);
-  return <nav className={`level ${classes}`}>{props.children}</nav>;
+const Level = (props) => {
+	return <nav className={`level ${props.mobile && 'is-mobile'}`}>{props.children}</nav>;
 };
 
 Level.propTypes = {
-  mobile: PropTypes.bool
+	mobile: PropTypes.bool
 };
 
 export default Level;

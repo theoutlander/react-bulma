@@ -1,11 +1,9 @@
 // https://bulma.io/documentation/form/file/
 import React from 'react';
 import PropTypes from 'prop-types';
-import { mapClasses } from '../util';
 
 // TODO: Full implementation is pending
 const FileUpload = (props) => {
-	let classes = mapClasses(props);
 	return (
 		<div className="file">
 			<label className="file-label">

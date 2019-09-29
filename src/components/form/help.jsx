@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { mapClasses } from '../util';
 import { ColorProps } from '../props';
 import BulmaHOC from '../bulma.hoc';
 
 const Help = (props) => {
-	let classes = mapClasses(props);
-	return <p className={`help ${classes} ${props.colorClass}`}>{props.value}</p>;
+	return <p className={`help ${props.colorClass}`}>{props.value}</p>;
 };
 
 Help.propTypes = {

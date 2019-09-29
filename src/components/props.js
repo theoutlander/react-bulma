@@ -6,10 +6,11 @@ const ColorProps = {
 	danger: PropTypes.bool,
 	warning: PropTypes.bool,
 	success: PropTypes.bool,
-  link: PropTypes.bool,
-  light: PropTypes.bool,
-  dark: PropTypes.bool,
-  
+	link: PropTypes.bool,
+	light: PropTypes.bool,
+	dark: PropTypes.bool,
+	white: PropTypes.bool,
+	black: PropTypes.bool
 };
 
 const SizeProps = {
