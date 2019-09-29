@@ -34,4 +34,11 @@ const SeparatorProps = {
 	succeedsdotSeparator: PropTypes.bool
 };
 
-export { ColorProps, SizeProps, ModifierProps, AlignmentProps, SeparatorProps };
+const StyleProps = {
+	boxed: PropTypes.bool,
+	toggle: PropTypes.bool,
+	toggleRounded: PropTypes.bool,
+	fullWidth: PropTypes.bool
+};
+
+export { ColorProps, SizeProps, ModifierProps, AlignmentProps, SeparatorProps, StyleProps };

@@ -5,8 +5,8 @@ const PanelBlock = (props) => {
 	return (
 		<React.Fragment>
 			{props.icon && (
-				<span class="panel-icon">
-					<i class={`fas ${props.icon}`} aria-hidden="true" />
+				<span className="panel-icon">
+					<i className={`fas ${props.icon}`} aria-hidden="true" />
 				</span>
 			)}
 			<p className={`panel-block ${props.active && 'is-active'}`}>{props.children}</p>

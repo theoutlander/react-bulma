@@ -98,6 +98,27 @@ function mapSeparators(props) {
 	return '';
 }
 
+function mapStyle(props) {
+	let classes = [];
+	if (props.boxed) {
+		classes.push('is-boxed');
+	}
+
+	if (props.toggle) {
+		classes.push('is-toggle');
+	}
+
+	if (props.toggleRounded) {
+		classes.push('is-toggle-rounded');
+	}
+
+	if (props.fullWidth) {
+		classes.push('is-full-width');
+	}
+
+	return classes.join(' ');
+}
+
 export default (Component) => {
 	return (props) => {
 		return (
@@ -109,6 +130,7 @@ export default (Component) => {
 				modifierClass={mapModifiers(props)}
 				alignmentClass={mapAlignment(props)}
 				separatorClass={mapSeparators(props)}
+				styleClass={mapStyle(props)}
 			/>
 		);
 	};

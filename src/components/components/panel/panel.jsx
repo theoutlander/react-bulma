@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Panel = (props) => <nav class="panel">{props.children}</nav>;
+const Panel = (props) => <nav className="panel">{props.children}</nav>;
 
 export default Panel;
