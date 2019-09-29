@@ -175,6 +175,41 @@ function mapContext(props) {
 	return '';
 }
 
+function mapHelpers(props) {
+	let classes = [];
+	if (props.clearfix) {
+		classes.push('is-clearfix');
+	} else if (props.pulledLeft) {
+		classes.push('is-pulledLeft');
+	} else if (props.pulledRight) {
+		classes.push('is-pulledRight');
+	} else if (props.marginless) {
+		classes.push('is-marginless');
+	} else if (props.paddingless) {
+		classes.push('is-paddingless');
+	} else if (props.overlay) {
+		classes.push('is-overlay');
+	} else if (props.clipped) {
+		classes.push('is-clipped');
+	} else if (props.radiusless) {
+		classes.push('is-radiusless');
+	} else if (props.shadowless) {
+		classes.push('is-shadowless');
+	} else if (props.unselectable) {
+		classes.push('is-unselectable');
+	} else if (props.invisible) {
+		classes.push('is-invisible');
+	} else if (props.hidden) {
+		classes.push('is-hidden');
+	} else if (props.screenreader) {
+		classes.push('is-sr-only');
+	} else if (props.relative) {
+		classes.push('is-relative');
+	}
+
+	return classes.join(' ');
+}
+
 export default (Component) => {
 	return (props) => {
 		return (
@@ -190,6 +225,7 @@ export default (Component) => {
 				stateClass={mapState(props)}
 				typeClass={mapType(props)}
 				contextualClass={mapContext(props)}
+				helperClass={mapHelpers(props)}
 			/>
 		);
 	};
