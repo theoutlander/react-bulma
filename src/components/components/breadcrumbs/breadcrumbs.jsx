@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { AlignmentProps, SeparatorProps, SizeProps } from '../props';
-import BulmaHOC from '../bulma.hoc';
+// import PropTypes from 'prop-types';
+import { AlignmentProps, SeparatorProps, SizeProps } from '../../props';
+import BulmaHOC from '../../bulma.hoc';
 
 const BreadCrumbs = (props) => {
 	return (

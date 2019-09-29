@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 // A classic modal overlay, in which you can include any content you want
 const ModalFooter = (props) => {
-	return <footer class="modal-card-foot">{props.children}</footer>;
+	return <footer className="modal-card-foot">{props.children}</footer>;
 };
 
 ModalFooter.propTypes = {

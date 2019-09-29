@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ColorProps, SizeProps } from '../props';
+import { SizeProps } from '../props';
 import BulmaHOC from '../bulma.hoc';
 
 const Control = (props) => {

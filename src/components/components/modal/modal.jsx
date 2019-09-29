@@ -9,11 +9,11 @@ const Modal = (props) => {
 	const [ active, setActive ] = useState(props.active);
 
 	return (
-		<div class={`modal ${active && 'is-active'} `}>
-			<div class="modal-background" />
-			<div class="modal-content">{props.children}</div>
+		<div className={`modal ${active && 'is-active'} `}>
+			<div className="modal-background" />
+			<div className="modal-content">{props.children}</div>
 			<button
-				class="modal-close is-large"
+				className="modal-close is-large"
 				aria-label="close"
 				onClick={() => {
 					setActive(false);

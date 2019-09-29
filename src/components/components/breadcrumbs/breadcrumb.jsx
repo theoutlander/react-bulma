@@ -1,10 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { AlignmentProps } from '../props';
-import BulmaHOC from '../bulma.hoc';
+// import PropTypes from 'prop-types';
+// import { AlignmentProps } from '../props';
+import BulmaHOC from '../../bulma.hoc';
 
 const BreadCrumb = (props) => {
 	return (
+		// eslint-disable-next-line
 		<li className={`${props.active && 'is-active'}`}>
 			<a href="#">
 				{props.icon && (

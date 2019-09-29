@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 // A classic modal overlay, in which you can include any content you want
 const ModalHeader = (props) => {
 	return (
-		<header class="modal-card-head">
-			<p class="modal-card-title">{props.children}</p>
-			<button class="delete" aria-label="close" />
+		<header className="modal-card-head">
+			<p className="modal-card-title">{props.children}</p>
+			<button className="delete" aria-label="close" />
 		</header>
 	);
 };

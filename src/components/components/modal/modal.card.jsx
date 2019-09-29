@@ -7,9 +7,9 @@ const ModalCard = (props) => {
 	//${props.clipped && 'is-clipped'}
 
 	return (
-		<div class={`modal ${props.active && 'is-active'}`}>
-			<div class="modal-background" />
-			<div class="modal-card">{props.children}</div>
+		<div className={`modal ${props.active && 'is-active'}`}>
+			<div className="modal-background" />
+			<div className="modal-card">{props.children}</div>
 		</div>
 	);
 };

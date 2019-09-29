@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 // A classic modal overlay, in which you can include any content you want
 const Modal = (props) => {
-	return <section class="modal-card-body">{props.children}</section>;
+	return <section className="modal-card-body">{props.children}</section>;
 };
 
 Modal.propTypes = {

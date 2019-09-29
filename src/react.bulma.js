@@ -35,8 +35,8 @@ import TagsGroup from './components/elements/tags.group';
 import Delete from './components/elements/delete';
 import Title from './components/elements/title';
 import SubTitle from './components/elements/subtitle';
-import BreadCrumbs from './components/components/breadcrumbs';
-import BreadCrumb from './components/components/breadcrumb';
+import BreadCrumbs from './components/components/breadcrumbs/breadcrumbs';
+import BreadCrumb from './components/components/breadcrumbs/breadcrumb';
 import Card from './components/components/card/card';
 import CardFooter from './components/components/card/card.footer';
 import CardFooterItem from './components/components/card/card.footer.item';
@@ -57,8 +57,26 @@ import ModalCard from './components/components/modal/modal.card';
 import ModalCardBody from './components/components/modal/modal.card.body';
 import ModalCardHeader from './components/components/modal/modal.card.header';
 import ModalCardFooter from './components/components/modal/modal.card.footer';
+import Navbar from './components/components/navbar/navbar';
+import NavbarBrand from './components/components/navbar/navbar.brand';
+import NavbarBurger from './components/components/navbar/navbar.burger';
+import NavbarStart from './components/components/navbar/navbar.start';
+import NavbarEnd from './components/components/navbar/navbar.end';
+import NavbarItem from './components/components/navbar/navbar.item';
+import NavbarMenu from './components/components/navbar/navbar.menu';
+import NavbarDropdown from './components/components/navbar/navbar.dropdown';
+import NavbarLink from './components/components/navbar/navbar.link';
 
 export {
+	Navbar,
+	NavbarLink,
+	NavbarBrand,
+	NavbarStart,
+	NavbarEnd,
+	NavbarItem,
+	NavbarDropdown,
+	NavbarMenu,
+	NavbarBurger,
 	Modal,
 	ModalCard,
 	ModalCardBody,

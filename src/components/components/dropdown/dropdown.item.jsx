@@ -7,6 +7,7 @@ const DropdownItem = (props) => {
 	}
 
 	return (
+		// eslint-disable-next-line
 		<a href="#" className={`dropdown-item ${props.active && 'is-active'}`}>
 			{props.children}
 		</a>
