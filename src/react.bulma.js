@@ -72,8 +72,16 @@ import PaginationLink from './components/components/pagination/pagination.link';
 import PaginationList from './components/components/pagination/pagination.list';
 import PaginationNext from './components/components/pagination/pagination.next';
 import PaginationPrevious from './components/components/pagination/pagination.previous';
+import Panel from './components/components/panel/panel';
+import PanelBlock from './components/components/panel/panel.block';
+import PanelHeading from './components/components/panel/panel.heading';
+import PanelTabs from './components/components/panel/panel.tabs';
 
 export {
+	Panel,
+	PanelTabs,
+	PanelHeading,
+	PanelBlock,
 	Pagination,
 	PaginationEllipses,
 	PaginationLink,
