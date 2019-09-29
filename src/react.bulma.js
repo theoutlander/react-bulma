@@ -66,8 +66,21 @@ import NavbarItem from './components/components/navbar/navbar.item';
 import NavbarMenu from './components/components/navbar/navbar.menu';
 import NavbarDropdown from './components/components/navbar/navbar.dropdown';
 import NavbarLink from './components/components/navbar/navbar.link';
+import Pagination from './components/components/pagination/pagination';
+import PaginationEllipses from './components/components/pagination/pagination.ellipses';
+import PaginationLink from './components/components/pagination/pagination.link';
+import PaginationList from './components/components/pagination/pagination.list';
+import PaginationNext from './components/components/pagination/pagination.next';
+import PaginationPrevious from './components/components/pagination/pagination.previous';
 
 export {
+	Pagination,
+	PaginationEllipses,
+	PaginationLink,
+	PaginationNest,
+	PaginationPrevious,
+	PaginationList,
+	PaginationNext,
 	Navbar,
 	NavbarLink,
 	NavbarBrand,
