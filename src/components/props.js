@@ -13,6 +13,32 @@ const ColorProps = {
 	black: PropTypes.bool
 };
 
+const TextColorProps = {
+	textPrimary: PropTypes.bool,
+	textInfo: PropTypes.bool,
+	textDanger: PropTypes.bool,
+	textWarning: PropTypes.bool,
+	textSuccess: PropTypes.bool,
+	textLink: PropTypes.bool,
+	textLight: PropTypes.bool,
+	textDark: PropTypes.bool,
+	textWhite: PropTypes.bool,
+	textBlack: PropTypes.bool
+};
+
+const BackgroundColorProps = {
+	backgroundPrimary: PropTypes.bool,
+	backgroundInfo: PropTypes.bool,
+	backgroundDanger: PropTypes.bool,
+	backgroundWarning: PropTypes.bool,
+	backgroundSuccess: PropTypes.bool,
+	backgroundLink: PropTypes.bool,
+	backgroundLight: PropTypes.bool,
+	backgroundDark: PropTypes.bool,
+	backgroundWhite: PropTypes.bool,
+	backgroundBlack: PropTypes.bool
+};
+
 const SizeProps = {
 	small: PropTypes.bool,
 	medium: PropTypes.bool,
@@ -30,6 +56,13 @@ const ModifierProps = {
 const AlignmentProps = {
 	centered: PropTypes.bool,
 	right: PropTypes.bool
+};
+
+const TextAlignmentProps = {
+	left: PropTypes.bool,
+	right: PropTypes.bool,
+	centered: PropTypes.bool,
+	justified: PropTypes.bool
 };
 
 const SeparatorProps = {
@@ -52,4 +85,15 @@ const StateProps = {
 	loading: PropTypes.bool
 };
 
-export { ColorProps, SizeProps, ModifierProps, AlignmentProps, SeparatorProps, StyleProps, StateProps };
+export {
+	ColorProps,
+	SizeProps,
+	ModifierProps,
+	AlignmentProps,
+	SeparatorProps,
+	StyleProps,
+	StateProps,
+	TextColorProps,
+	BackgroundColorProps,
+	TextAlignmentProps
+};

@@ -76,8 +76,12 @@ import Panel from './components/components/panel/panel';
 import PanelBlock from './components/components/panel/panel.block';
 import PanelHeading from './components/components/panel/panel.heading';
 import PanelTabs from './components/components/panel/panel.tabs';
+import Image from './components/elements/image';
+import Field from './components/form/field';
 
 export {
+	Field,
+	Image,
 	Panel,
 	PanelTabs,
 	PanelHeading,

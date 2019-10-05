@@ -11,9 +11,9 @@ function mapSize(props) {
 	} else if (props.large) {
 		return 'is-large';
 	} else if (props.fullHeight) {
-		return 'fullheight';
+		return 'is-fullheight';
 	} else if (props.fullHeightWithNavbar) {
-		return 'fullheight-with-navbar';
+		return 'is-fullheight-with-navbar';
 	} else if (props.size >= 0) {
 		return `is-${props.size}`;
 	}
@@ -64,6 +64,58 @@ function mapColors(props) {
 	return '';
 }
 
+function mapTextColors(props) {
+	if (props.textPrimary) {
+		return 'has-text-primary';
+	} else if (props.textInfo) {
+		return 'has-text-info';
+	} else if (props.textDanger) {
+		return 'has-text-danger';
+	} else if (props.textWarning) {
+		return 'has-text-warning';
+	} else if (props.textLink) {
+		return 'has-text-link';
+	} else if (props.textSuccess) {
+		return 'has-text-success';
+	} else if (props.textBlack) {
+		return 'has-text-black';
+	} else if (props.textDark) {
+		return 'has-text-dark';
+	} else if (props.textLight) {
+		return 'has-text-light';
+	} else if (props.textWhite) {
+		return 'has-text-white';
+	}
+
+	return '';
+}
+
+function mapBackgroundColors(props) {
+	if (props.backgroundPrimary) {
+		return 'has-background-primary';
+	} else if (props.backgroundInfo) {
+		return 'has-background-info';
+	} else if (props.backgroundDanger) {
+		return 'has-background-danger';
+	} else if (props.backgroundWarning) {
+		return 'has-background-warning';
+	} else if (props.backgroundLink) {
+		return 'has-background-link';
+	} else if (props.backgroundSuccess) {
+		return 'has-background-success';
+	} else if (props.backgroundBlack) {
+		return 'has-background-black';
+	} else if (props.backgroundDark) {
+		return 'has-background-dark';
+	} else if (props.backgroundLight) {
+		return 'has-background-light';
+	} else if (props.backgroundWhite) {
+		return 'has-background-white';
+	}
+
+	return '';
+}
+
 function mapModifiers(props) {
 	let classes = [];
 	if (props.rounded) {
@@ -83,6 +135,20 @@ function mapAlignment(props) {
 		return 'is-centered';
 	} else if (props.right) {
 		return 'is-right';
+	}
+
+	return '';
+}
+
+function mapTextAlignment(props) {
+	if (props.centered) {
+		return 'has-text-centered';
+	} else if (props.right) {
+		return 'has-text-right';
+	} else if (props.left) {
+		return 'has-text-left';
+	} else if (props.justified) {
+		return 'has-text-justified';
 	}
 
 	return '';
@@ -226,6 +292,9 @@ export default (Component) => {
 				typeClass={mapType(props)}
 				contextualClass={mapContext(props)}
 				helperClass={mapHelpers(props)}
+				textColorClass={mapTextColors(props)}
+				backgroundColorClass={mapBackgroundColors(props)}
+				textAlignmentClass={mapTextAlignment(props)}
 			/>
 		);
 	};

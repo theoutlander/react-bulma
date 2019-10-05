@@ -10,7 +10,11 @@ const Control = (props) => {
 	classes += props.static && ' is-static';
 
 	return (
-		<div className={`control ${classes} ${props.sizeClass}`} disabled={props.disabled} readOnly={props.readonly}>
+		<div
+			className={`control ${classes} ${props.sizeClass} ${props.expanded && 'is-expanded'}`}
+			disabled={props.disabled}
+			readOnly={props.readonly}
+		>
 			{props.children}
 		</div>
 	);
@@ -23,6 +27,7 @@ Control.propTypes = {
 	loading: PropTypes.bool,
 	disabled: PropTypes.bool,
 	readonly: PropTypes.bool,
+	expanded: PropTypes.bool,
 	static: PropTypes.bool
 };
 

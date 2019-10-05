@@ -2,13 +2,16 @@ import 'bulma';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { mapClasses } from '../util';
+import { TextAlignmentProps } from '../props';
+import BulmaHOC from '../bulma.hoc';
 
 const Column = (props) => {
 	let classes = mapClasses(props);
-	return <div className={`column ${classes}`}>{props.children}</div>;
+	return <div className={`column ${classes} ${props.textAlignmentClass}`}>{props.children}</div>;
 };
 
 Column.propTypes = {
+	...TextAlignmentProps,
 	width: PropTypes.number,
 	half: PropTypes.bool,
 	full: PropTypes.bool,
@@ -40,4 +43,4 @@ Column.propTypes = {
 	narrowFullhd: PropTypes.bool
 };
 
-export default Column;
+export default BulmaHOC(Column);

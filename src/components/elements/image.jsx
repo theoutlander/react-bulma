@@ -18,11 +18,12 @@ const Image = (props) => {
 };
 
 Image.propTypes = {
-	dimension: PropTypes.number.required,
+	dimension: PropTypes.number.isRequired,
 	rounded: PropTypes.bool,
 	//https://bulma.io/documentation/elements/image/#responsive-images-with-ratios
 	ratio: PropTypes.string,
-	fullwidth: PropTypes.string
+	fullwidth: PropTypes.string,
+	src: PropTypes.string
 };
 
 export default BulmaHOC(Image);
