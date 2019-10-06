@@ -1,9 +1,14 @@
 {
-	"name": "react-bulma-component-library",
+	"name": "react-bulma",
 	"version": "1.0.0",
 	"description": "React Component Library for the Bulma CSS Framework based on Flexbox",
-	"keywords": [ "react", "bulma", "css", "framework" ],
-	"main": "src/index.jsx",
+	"keywords": [
+		"react",
+		"bulma",
+		"css",
+		"framework"
+	],
+	"main": "src/react.bulma.js",
 	"dependencies": {
 		"@babel/core": "7.4.3",
 		"@babel/preset-env": "7.6.2",
@@ -80,11 +85,23 @@
 		"test2": "node scripts/test.js --env=jsdom",
 		"test": "babel-jest --updateSnapshot"
 	},
-	"browserslist": [ ">0.2%", "not dead", "not ie <= 11", "not op_mini all" ],
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
 	"jest": {
-		"collectCoverageFrom": [ "src/**/*.{js,jsx,ts,tsx}", "!src/**/*.d.ts" ],
-		"setupFiles": [ "react-app-polyfill/jsdom" ],
-		"setupFilesAfterEnv": [ "<rootDir>/src/setupTests.js" ],
+		"collectCoverageFrom": [
+			"src/**/*.{js,jsx,ts,tsx}",
+			"!src/**/*.d.ts"
+		],
+		"setupFiles": [
+			"react-app-polyfill/jsdom"
+		],
+		"setupFilesAfterEnv": [
+			"<rootDir>/src/setupTests.js"
+		],
 		"testMatch": [
 			"<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
 			"<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
@@ -104,11 +121,27 @@
 			"^react-native$": "react-native-web",
 			"^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
 		},
-		"moduleFileExtensions": [ "web.js", "js", "web.ts", "ts", "web.tsx", "tsx", "json", "web.jsx", "jsx", "node" ],
-		"watchPlugins": [ "jest-watch-typeahead/filename", "jest-watch-typeahead/testname" ]
+		"moduleFileExtensions": [
+			"web.js",
+			"js",
+			"web.ts",
+			"ts",
+			"web.tsx",
+			"tsx",
+			"json",
+			"web.jsx",
+			"jsx",
+			"node"
+		],
+		"watchPlugins": [
+			"jest-watch-typeahead/filename",
+			"jest-watch-typeahead/testname"
+		]
 	},
 	"babel": {
-		"presets": [ "react-app" ]
+		"presets": [
+			"react-app"
+		]
 	},
 	"eslintConfig": {
 		"extends": "react-app"
