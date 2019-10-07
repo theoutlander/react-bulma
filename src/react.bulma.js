@@ -1,3 +1,6 @@
+import 'bulma';
+import '@fortawesome/fontawesome-free/css/all.css';
+
 import Columns from './components/columns/columns';
 import Column from './components/columns/column';
 import Container from './components/layout/container';
