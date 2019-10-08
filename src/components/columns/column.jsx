@@ -6,8 +6,8 @@ import { TextAlignmentProps } from '../props';
 import BulmaHOC from '../bulma.hoc';
 
 const Column = (props) => {
-	let classes = mapClasses(props);
-	return <div className={`column ${classes} ${props.textAlignmentClass}`}>{props.children}</div>;
+	// let classes = mapClasses(props);
+  return <div className={`column ${props.sizeClass} ${props.widthClass} ${props.backgroundColorClass} ${props.textAlignmentClass}`}>{props.children}</div>;
 };
 
 Column.propTypes = {

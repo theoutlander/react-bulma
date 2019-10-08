@@ -276,10 +276,35 @@ function mapHelpers(props) {
 	return classes.join(' ');
 }
 
+function mapWidth(props) {
+  if (props.oneThird) {
+    return 'is-one-third';
+  } else if (props.twoThirds) {
+    return 'is-two-thirds';
+  } else if (props.half) {
+    return 'is-half';
+  } else if (props.full) {
+    return 'is-full';
+  } else if (props.oneQuarter) {
+    return 'is-one-quarter';
+  } else if (props.threeQuarters) {
+    return 'is-three-quarters';
+  } else if (props.oneFifth) {
+    return 'is-one-fifth';
+  } else if (props.twoFifths) {
+    return 'is-two-fifths';
+  } else if (props.threeFifths) {
+    return 'is-three-fifths';
+  } else if (props.fourFifths) {
+    return 'is-four-fifths';
+  }
+
+  return '';
+}
 export default (Component) => {
-	return (props) => {
+  return (props) => {
 		return (
-			<Component
+      <Component
 				{...props}
 				sizeClass={mapSize(props)}
 				dimensionClass={mapDimension(props)}
@@ -294,7 +319,8 @@ export default (Component) => {
 				helperClass={mapHelpers(props)}
 				textColorClass={mapTextColors(props)}
 				backgroundColorClass={mapBackgroundColors(props)}
-				textAlignmentClass={mapTextAlignment(props)}
+        textAlignmentClass={mapTextAlignment(props)}
+				widthClass={mapWidth(props)}
 			/>
 		);
 	};
