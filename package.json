@@ -4,6 +4,7 @@
   "description": "React Component Library for the Bulma CSS Framework based on Flexbox",
   "main": "./src/react.bulma.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
     "bulma": "^0.7.5",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
@@ -12,7 +13,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
-    "@babel/plugin-proposal-object-rest-spread": "^7.6.2"
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "eslint-plugin-react-hooks": "^2.1.2"
   },
   "scripts": {
     "start": "parcel ./src/react.bulma.js"

@@ -1,4 +1,3 @@
-import 'bulma';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { mapClasses } from '../util';
