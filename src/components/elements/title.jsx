@@ -17,8 +17,8 @@ const Title = (props) => {
 };
 
 Title.propTypes = {
-	size: PropTypes.number,
-	spaced: PropTypes.string,
+	size   : PropTypes.number,
+	spaced : PropTypes.bool,
 	...TextColorProps,
 	...BackgroundColorProps
 };
