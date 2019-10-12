@@ -10,14 +10,18 @@ const Button = (props) => {
 
 	let markup = [];
 	if (props.anchor) {
-		markup.push(<a className={`${classes} ${props.colorClass}`}>{props.children}</a>);
+		markup.push(
+			<a className={`${classes} ${props.colorClass}`} onClick={props.onClick}>
+				{props.children}
+			</a>
+		);
 	} else if (props.submit) {
-		markup.push(<input className={classes} type="submit" value={props.children} />);
+		markup.push(<input className={classes} type="submit" value={props.children} onClick={props.onClick} />);
 	} else if (props.reset) {
-		markup.push(<input className={classes} type="reset" value={props.children} />);
+		markup.push(<input className={classes} type="reset" value={props.children} onClick={props.onClick} />);
 	} else {
 		markup.push(
-			<button key="btn" className={classes}>
+			<button key="btn" className={classes} onClick={props.onClick}>
 				{props.children}
 			</button>
 		);
@@ -37,21 +41,21 @@ const Button = (props) => {
 Button.propTypes = {
 	...ColorProps,
 	...SizeProps,
-	anchor: PropTypes.bool,
-	submit: PropTypes.bool,
-	reset: PropTypes.bool,
-	button: PropTypes.bool,
-	text: PropTypes.bool,
-	fullwidth: PropTypes.bool,
-	outlined: PropTypes.bool,
-	hovered: PropTypes.bool,
-	active: PropTypes.bool,
-	static: PropTypes.bool,
-	loading: PropTypes.bool,
-	rounded: PropTypes.bool,
-	inverted: PropTypes.bool,
-	icon: PropTypes.string,
-	selected: PropTypes.bool
+	anchor    : PropTypes.bool,
+	submit    : PropTypes.bool,
+	reset     : PropTypes.bool,
+	button    : PropTypes.bool,
+	text      : PropTypes.bool,
+	fullwidth : PropTypes.bool,
+	outlined  : PropTypes.bool,
+	hovered   : PropTypes.bool,
+	active    : PropTypes.bool,
+	static    : PropTypes.bool,
+	loading   : PropTypes.bool,
+	rounded   : PropTypes.bool,
+	inverted  : PropTypes.bool,
+	icon      : PropTypes.string,
+	selected  : PropTypes.bool
 };
 
 export default BulmaHOC(Button);
