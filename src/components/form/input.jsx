@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Label from './label';
 import Control from './control';
-import { ColorProps, SizeProps, StatesProps, StateProps, TextColorProps } from '../props';
+import { ColorProps, SizeProps, StateProps, TextColorProps } from '../props';
 import BulmaHOC from '../bulma.hoc';
 
 const Input = (props) => {
-	const [ value, setValue ] = useState(props.value);
+	const [
+		value,
+		setValue
+	] = useState(props.value);
 
 	return (
 		<div className={`field`}>
@@ -30,9 +33,9 @@ Input.propTypes = {
 	...StateProps,
 	...SizeProps,
 	...TextColorProps,
-	expanded: PropTypes.bool,
-	placeholder: PropTypes.string,
-	rounded: PropTypes.bool
+	expanded    : PropTypes.bool,
+	placeholder : PropTypes.string,
+	rounded     : PropTypes.bool
 };
 
 export default BulmaHOC(Input);

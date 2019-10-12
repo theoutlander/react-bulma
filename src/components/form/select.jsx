@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Control from './control';
-import { ColorProps, SizeProps, StatesProps, StateProps } from '../props';
+import { ColorProps, SizeProps, StateProps } from '../props';
 import BulmaHOC from '../bulma.hoc';
 
 const Select = (props) => {
@@ -34,12 +34,12 @@ const Select = (props) => {
 Select.propTypes = {
 	...ColorProps,
 	...SizeProps,
-	rounded: PropTypes.bool,
+	rounded  : PropTypes.bool,
 	...StateProps,
-	options: PropTypes.arrayOf(PropTypes.string),
-	multiple: PropTypes.bool,
-	iconLeft: PropTypes.bool,
-	icon: PropTypes.string
+	options  : PropTypes.arrayOf(PropTypes.string),
+	multiple : PropTypes.bool,
+	iconLeft : PropTypes.bool,
+	icon     : PropTypes.string
 };
 
 export default BulmaHOC(Select);

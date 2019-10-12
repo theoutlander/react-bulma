@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Label from './label';
 import Control from './control';
-import { ColorProps, SizeProps, StatesProps, StateProps } from '../props';
+import { ColorProps, SizeProps, StateProps } from '../props';
 import BulmaHOC from '../bulma.hoc';
 
 const TextArea = (props) => {
-	const [ value, setValue ] = useState(props.value);
+	const [
+		value,
+		setValue
+	] = useState(props.value);
 	return (
 		<div className="field">
 			{props.label && <Label value={props.label} />}
@@ -27,10 +30,10 @@ const TextArea = (props) => {
 
 TextArea.propTypes = {
 	...ColorProps,
-	rows: PropTypes.number,
+	rows      : PropTypes.number,
 	...SizeProps,
 	...StateProps,
-	fixedSize: PropTypes.bool
+	fixedSize : PropTypes.bool
 };
 
 export default BulmaHOC(TextArea);

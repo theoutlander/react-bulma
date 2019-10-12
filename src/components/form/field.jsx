@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SizeProps } from '../props';
 import BulmaHOC from '../bulma.hoc';
 
 const Field = (props) => {
@@ -8,7 +7,7 @@ const Field = (props) => {
 };
 
 Field.propTypes = {
-	addons: PropTypes.bool
+	addons : PropTypes.bool
 };
 
 export default BulmaHOC(Field);
