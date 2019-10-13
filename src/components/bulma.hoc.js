@@ -34,13 +34,76 @@ const classMap = {
 	hovered              : 'is-hovered',
 	active               : 'is-active',
 	static               : 'is-static',
+	focused              : 'is-focused',
 	loading              : 'is-loading',
 	rounded              : 'is-rounded',
 	inverted             : 'is-inverted',
 	selected             : 'is-selected',
-	button               : 'button'
-
-	// size                 : PropTypes.number,
+	button               : 'button',
+	centered             : 'is-centered',
+	right                : 'is-right',
+	textCentered         : 'has-text-centered',
+	textRight            : 'has-text-right',
+	textLeft             : 'has-text-left',
+	textJustified        : 'has-text-justified',
+	arrowSeparator       : 'has-arrow-separator',
+	bulletSeparator      : 'has-bullet-separator',
+	dotSeparator         : 'has-dot-separator',
+	succeedsSeparator    : 'has-succeeds-separator',
+	boxed                : 'is-boxed',
+	toggle               : 'is-toggle',
+	toggleRounded        : 'is-toggle-rounded',
+	boxed                : 'is-boxed',
+	text                 : 'text',
+	tel                  : 'tel',
+	email                : 'email',
+	password             : 'password',
+	ancestor             : 'is-ancestor',
+	parent               : 'is-parent',
+	child                : 'is-child',
+	clearfix             : 'is-clearfix',
+	pulledLeft           : 'is-pulledLeft',
+	pulledRight          : 'is-pulledRight',
+	marginless           : 'is-marginless',
+	paddingless          : 'is-paddingless',
+	overlay              : 'is-overlay',
+	clipped              : 'is-clipped',
+	radiusless           : 'is-radiusless',
+	shadowless           : 'is-shadowless',
+	unselectable         : 'is-unselectable',
+	invisible            : 'is-invisible',
+	hidden               : 'is-hidden',
+	screenreader         : 'is-sr-only',
+	relative             : 'is-relative',
+	textPrimary          : 'has-text-primary',
+	textInfo             : 'has-text-info',
+	textDanger           : 'has-text-danger',
+	textWarning          : 'has-text-warning',
+	textSuccess          : 'has-text-link',
+	textBlack            : 'has-text-black',
+	textDark             : 'has-text-dark',
+	textLight            : 'has-text-light',
+	textWhite            : 'has-text-white',
+	backgroundPrimary    : 'has-background-primary',
+	backgroundInfo       : 'has-background-info',
+	backgroundDanger     : 'has-background-danger',
+	backgroundWarning    : 'has-background-warning',
+	backgroundLink       : 'has-background-link',
+	backgroundSuccess    : 'has-background-success',
+	backgroundBlack      : 'has-background-black',
+	backgroundDark       : 'has-background-dark',
+	backgroundLight      : 'has-background-light',
+	backgroundWhite      : 'has-background-white',
+	oneThird             : 'is-one-third',
+	twoThirds            : 'is-two-thirds',
+	half                 : 'is-half',
+	full                 : 'is-full',
+	oneQuarter           : 'is-one-quarter',
+	threeQuarters        : 'is-three-quarters',
+	oneFifth             : 'is-one-fifth',
+	twoFifths            : 'is-two-fifths',
+	threeFifths          : 'is-three-fifths',
+	fourFifths           : 'is-four-fifths'
 };
 
 function mapClasses(props) {
@@ -49,15 +112,22 @@ function mapClasses(props) {
 }
 
 function mapCSSClasses(props, Classes) {
-	let val = Object.keys(Classes)
-		.filter((c) => Classes[c] === PropTypes.bool && props[c])
-		.map((c) => classMap[c])
-		.join(' ');
-	return val;
+	let val = Object.keys(Classes).filter((c) => Classes[c] === PropTypes.bool && props[c]).map((c) => classMap[c]);
+
+	let val2 = Object.keys(Classes)
+		.filter((c) => Classes[c] === PropTypes.string && classMap[props[c]])
+		.map((c) => classMap[props[c]]);
+
+	return [
+		...val,
+		...val2
+	].join(' ');
 }
 
 function mapSize(props) {
-	if (props.small) {
+	if (props.size >= 0) {
+		return `is-${props.size}`;
+	} else if (props.small) {
 		return 'is-small';
 	} else if (props.medium) {
 		return 'is-medium';
@@ -69,8 +139,6 @@ function mapSize(props) {
 		return 'is-fullheight';
 	} else if (props.fullHeightWithNavbar) {
 		return 'is-fullheight-with-navbar';
-	} else if (props.size >= 0) {
-		return `is-${props.size}`;
 	}
 
 	return '';
@@ -174,9 +242,12 @@ function mapBackgroundColors(props) {
 function mapModifiers(props) {
 	let classes = [];
 	if (props.rounded) {
-		classes.push('is-rounded');
+		classes.push(
+			mapClasses([
+				'rounded'
+			])
+		);
 	}
-
 	// TODO: ???
 	// if (props.delete) {
 	// 	classes.push('is-delete');
@@ -364,11 +435,16 @@ export default (Component, ClassesProps) => {
 
 		if (Component.propTypes) {
 			Classes = mapCSSClasses(props, Component.propTypes);
+			console.log(Classes);
 		}
 
-		// if (ClassesProps) {
-		// 	Classes = mapCSSClasses(props, ClassesProps);
-		// }
+		if (Component.propTypes.dimension) {
+			Classes = `${Classes} ${mapDimension(props)}`;
+		}
+
+		if (Component.propTypes.size) {
+			Classes = `${Classes} ${mapSize(props)}`;
+		}
 
 		return (
 			<Component
@@ -388,7 +464,7 @@ export default (Component, ClassesProps) => {
 				backgroundColorClass={mapBackgroundColors(props)}
 				textAlignmentClass={mapTextAlignment(props)}
 				widthClass={mapWidth(props)}
-				classes={mapClasses(props)}
+				// classes={mapClasses(props)}
 				CSSClasses={Classes}
 			/>
 		);

@@ -1,6 +1,24 @@
-let viewports = [ 'mobile', 'desktop', 'widescreen', 'fullhd', 'tablet' ];
-let ignoreList = [ 'children', 'width', 'offset', 'gap', 'fixedSize' ];
-let gapList = [ 'mobileGap', 'desktopGap', 'widescreenGap', 'tabletGap', 'fullhdGap' ];
+let viewports = [
+	'mobile',
+	'desktop',
+	'widescreen',
+	'fullhd',
+	'tablet'
+];
+let ignoreList = [
+	'children',
+	'width',
+	'offset',
+	'gap',
+	'fixedSize'
+];
+let gapList = [
+	'mobileGap',
+	'desktopGap',
+	'widescreenGap',
+	'tabletGap',
+	'fullhdGap'
+];
 
 function mapClasses(props) {
 	let keys = Object.keys(props);
@@ -71,4 +89,4 @@ function mapComposite(props) {
 	return filter.join(' ');
 }
 
-export { mapClasses, mapComposite };
+// export { mapClasses, mapComposite };

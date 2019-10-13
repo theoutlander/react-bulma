@@ -11,7 +11,7 @@ const Tag = (props) => {
 				Bar
 				<button className="delete is-small" />
 			</span> */}
-			<span className={`tag ${props.colorClass} ${props.modifierClass}`}>
+			<span className={`tag ${props.colorClass} ${props.CSSClasses}`}>
 				{props.children}
 				{props.delete && <button className={`delete ${props.colorClass} ${props.sizeClass}`} />}
 			</span>
@@ -23,7 +23,7 @@ Tag.propTypes = {
 	...ColorProps,
 	...SizeProps,
 	...ModifierProps,
-	delete: PropTypes.bool
+	delete : PropTypes.bool
 };
 
 export default BulmaHOC(Tag);

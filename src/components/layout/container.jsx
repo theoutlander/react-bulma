@@ -6,14 +6,7 @@ import { BackgroundColorProps } from '../props';
 
 // A simple container to center your content horizontally
 const Container = (props) => {
-	return (
-		<div
-			className={`container ${props.classes} ${props.colorClass} ${props.fluid && 'is-fluid'} ${props.fullhd &&
-				'is-fullhd'} ${props.widescreen && 'is-widescreen'}`}
-		>
-			{props.children}
-		</div>
-	);
+	return <div className={`container ${props.CSSClasses}`}>{props.children}</div>;
 };
 
 Container.propTypes = {

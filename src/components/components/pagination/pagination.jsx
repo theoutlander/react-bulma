@@ -6,7 +6,7 @@ import BulmaHOC from '../../bulma.hoc';
 const Pagination = (props) => {
 	return (
 		<nav
-			className={`pagination ${props.alignmentClass} ${props.modifierClass} ${props.sizeClass}`}
+			className={`pagination ${props.alignmentClass} ${props.CSSClasses} ${props.sizeClass}`}
 			role="navigation"
 			aria-label={props.ariaLabel}
 		>
@@ -17,8 +17,8 @@ const Pagination = (props) => {
 
 Pagination.propTypes = {
 	...AlignmentProps,
-	ariaLabel: PropTypes.string,
-	rounded: PropTypes.bool,
+	ariaLabel : PropTypes.string,
+	rounded   : PropTypes.bool,
 	...SizeProps
 };
 
