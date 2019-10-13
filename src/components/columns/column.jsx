@@ -5,7 +5,6 @@ import { TextAlignmentProps } from '../props';
 import BulmaHOC from '../bulma.hoc';
 
 const Column = (props) => {
-	// let classes = mapClasses(props);
 	return (
 		<div
 			className={`column ${props.sizeClass} ${props.widthClass} ${props.backgroundColorClass} ${props.textAlignmentClass}`}
@@ -18,8 +17,10 @@ const Column = (props) => {
 
 Column.propTypes = {
 	style               : PropTypes.object,
-	...TextAlignmentProps,
 	width               : PropTypes.number,
+	offset              : PropTypes.number,
+
+	...TextAlignmentProps,
 	half                : PropTypes.bool,
 	full                : PropTypes.bool,
 	oneThird            : PropTypes.bool,
@@ -30,7 +31,6 @@ Column.propTypes = {
 	twoFifths           : PropTypes.bool,
 	threeFifths         : PropTypes.bool,
 	fourFifths          : PropTypes.bool,
-	offset              : PropTypes.number,
 	offsetHalf          : PropTypes.bool,
 	offsetFull          : PropTypes.bool,
 	offsetOneThird      : PropTypes.bool,
