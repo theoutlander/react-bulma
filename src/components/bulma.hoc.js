@@ -428,6 +428,32 @@ function mapWidth(props) {
 	return '';
 }
 
+function mapOffset(props) {
+	if (props.offsetFourFifths) {
+		return 'is-offset-four-fifths';
+	} else if (props.offsetThreeFifths) {
+		return 'is-offset-three-fifths';
+	} else if (props.offsetTwoFifths) {
+		return 'is-offset-two-fifths';
+	} else if (props.offsetOneFifth) {
+		return 'is-offset-one-fifth';
+	} else if (props.offsetThreeQuarters) {
+		return 'is-offset-three-quarters';
+	} else if (props.offsetOneQuarter) {
+		return 'is-offset-one-quarter';
+	} else if (props.offsetTwoThirds) {
+		return 'is-offset-two-thirds';
+	} else if (props.offsetOneThird) {
+		return 'is-offset-one-third';
+	} else if (props.offsetFull) {
+		return 'is-offset-full';
+	} else if (props.offsetHalf) {
+		return 'is-offset-half';
+	}
+
+	return '';
+}
+
 export default (Component, ClassesProps) => {
 	return (props) => {
 		let Classes;
@@ -464,6 +490,7 @@ export default (Component, ClassesProps) => {
 				backgroundColorClass={mapBackgroundColors(props)}
 				textAlignmentClass={mapTextAlignment(props)}
 				widthClass={mapWidth(props)}
+				offsetClass={mapOffset(props)}
 				// classes={mapClasses(props)}
 				CSSClasses={Classes}
 			/>

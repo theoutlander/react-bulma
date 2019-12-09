@@ -7,7 +7,7 @@ import BulmaHOC from '../bulma.hoc';
 const Column = (props) => {
 	return (
 		<div
-			className={`column ${props.sizeClass} ${props.widthClass} ${props.backgroundColorClass} ${props.textAlignmentClass}`}
+			className={`column ${props.sizeClass} ${props.widthClass} ${props.offsetClass} ${props.backgroundColorClass} ${props.textAlignmentClass}`}
 			style={props.style}
 		>
 			{props.children}
